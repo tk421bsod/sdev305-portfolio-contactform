@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Confirmation</title>
+</head>
+<body>
+    <div id="main-content">
+        <h1 id="header">Thank you!</h1>
+        <p>Your information has been recorded.</p>
+        <br>
+        <p>First name: <%= contact.first_name %></p>
+        <p>Last name: <%= contact.last_name %></p>
+        <p>Job title: <%= contact.job_title %></p>
+        <p>Company: <%= contact.company %></p>
+        <p>LinkedIn URL: <%= contact.linkedin %></p>
+        <p>Email address: <%= contact.email %></p>
+        <p>Source: <%= contact.source %></p>
+        <% if (contact.source == "Other") { %>
+            <p>Source details: <%= contact.source_other %></p>
+        <% } %>
+        <p>Message: <%= contact.message %></p>
+        <p>Added to mailing list: <%= contact.mailing_list ? "Yes" : "No" %></p>
+        <% if (contact.mailing_list) { %>
+            <p>Email format: <%= contact.email_format %></p>
+        <% } %>
+        <button id="order-again-button" class="primary-button" onclick="window.location.href='/'">Go back</button>
+    </div>
+</body>
+</html>
