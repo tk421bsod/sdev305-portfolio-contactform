@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/validation.js"></script>
     <title>Contact Form</title>
 </head>
 <body>
     <div id="main-content">
         <h1 id="header">Contact Form</h1>
-        <form id="form-body">
+        <form id="form-body" action="/submit" method="post">
             <div class="form-fields">
                 <div>
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first-name">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name">
                 </div>
                 <div>
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name">    
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name">    
                 </div>
                 <div>
-                    <label for="job-title">Job Title</label>
-                    <input type="text" id="job-title" name="job-title">
+                    <label for="job_title">Job Title</label>
+                    <input type="text" id="job_title" name="job_title">
                 </div>
                 <div>
                     <label for="company">Company</label>
@@ -48,21 +49,22 @@
                     </select>
                 </div>
                 <div>
-                    <label for="source-other">Other (please specify)</label>
-                    <input type="text" id="source-other" name="source-other">
+                    <label for="source_other">Other (please specify)</label>
+                    <input type="text" id="source_other" name="source_other">
                 </div>
             </div>
             <label for="message">Message</label>
             <textarea id="message" name="message"></textarea>
             <div class="inline">
-                <input type="checkbox" name="mailing-list" id="mailing-list" value="1"> 
-                <label for="mailing-list">Please add me to your mailing list</label>
+                <input type="checkbox" name="mailing_list" id="mailing_list" value="1"> 
+                <label for="mailing_list">Please add me to your mailing list</label>
             </div>
-            <div class="inline">
-                <input type="radio" name="email-format" value="html">
-                <label for="email-format">HTML</label>
-                <input type="radio" name="email-format" value="text">
-                <label for="email-format">Text</label>
+            <p>Email Format</p>
+            <div class="inline" id="email-formats">
+                <input type="radio" name="email_format" value="html">
+                <label for="email_format">HTML</label>
+                <input type="radio" name="email_format" value="text">
+                <label for="email_format">Text</label>
             </div>
             <button type="submit" id="submit-button">Submit</button>
         </form>

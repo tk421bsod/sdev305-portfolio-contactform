@@ -49,6 +49,7 @@ input, select {
     border-radius: 2px;
     border: 1px solid gray;
     padding: 3px 2px 7px 2px;
+    margin: 1vh auto 1vh auto;
 }
 
 label {
